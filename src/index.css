@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+
+    background-color: #3b3b98;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+h2{
+    font-size: 28px;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+h4{
+    font-size: 20px;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.container{
+    background-color: #23235b;
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 500px;
+    max-width: 100%;
+}
+
+
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 12px 10px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.rating input[type='radio']{
+    display: none;
+}
+.rating label:before{
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    border: 2px solid orange;
+    background-color: transparent;
+}
+.rating input[type='radio']:checked+label:before {
+    content: " ";
+    position: relative;
+    border: 2px solid orange;
+    border-radius: 11px;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    display: inline-block;
+    background-color: blue;
+  }
+
+.feedback-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.num-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+.text-display{
+    margin-right: 5px;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    margin: 5px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.input-group button{
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.feedback-btns{
+    display: flex;
+    flex-direction: column;
+}
+.feedback-info{
+    display: flex;
+}
+.edit{
+    margin-top: 15px;
+}
+
+.message{
+    color: red;
 }
